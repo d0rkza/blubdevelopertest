@@ -11,16 +11,71 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlubDeveloperTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="MainScene">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YdZ-bb-iMY">
+                                <rect key="frame" x="20" y="44" width="374" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="759" id="cHk-Xo-SNL"/>
+                                </constraints>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg8-f7-k41">
+                                <rect key="frame" x="20" y="811" width="374" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="navigateToAddCity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5Y-p8-CSV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sg8-f7-k41" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GNn-fw-R6U"/>
+                            <constraint firstItem="YdZ-bb-iMY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ks7-Ha-fe6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YdZ-bb-iMY" secondAttribute="trailing" constant="20" id="PzT-tc-tco"/>
+                            <constraint firstItem="YdZ-bb-iMY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QMq-jV-OF3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sg8-f7-k41" secondAttribute="trailing" constant="20" id="VID-bz-ikx"/>
+                            <constraint firstItem="sg8-f7-k41" firstAttribute="top" secondItem="YdZ-bb-iMY" secondAttribute="bottom" constant="8" id="d7h-rL-MP2"/>
+                            <constraint firstItem="sg8-f7-k41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fm4-bM-R9B"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--AddCityScene-->
+        <scene sceneID="exz-y1-NFv">
+            <objects>
+                <viewController id="KL7-uX-OqM" userLabel="AddCityScene" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hsR-iR-lDd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tK6-xd-cKh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oG1-RC-1hR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="844"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ObE-2T-HSr">
+            <objects>
+                <viewController id="fLV-CN-xKX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wN6-c8-duw" userLabel="CityDetailsScene">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="z8E-1z-5hk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5a-2o-coR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="138"/>
         </scene>
     </scenes>
 </document>
