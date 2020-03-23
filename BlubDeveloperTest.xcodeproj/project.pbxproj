@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4EE0052428F3590021DEF7 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4EE0042428F3590021DEF7 /* City.swift */; };
 		FAF35909242740C900EC2639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF35908242740C900EC2639 /* AppDelegate.swift */; };
 		FAF3590B242740C900EC2639 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3590A242740C900EC2639 /* SceneDelegate.swift */; };
-		FAF3590D242740C900EC2639 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3590C242740C900EC2639 /* ViewController.swift */; };
+		FAF3590D242740C900EC2639 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3590C242740C900EC2639 /* MainViewController.swift */; };
 		FAF35910242740C900EC2639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF3590E242740C900EC2639 /* Main.storyboard */; };
 		FAF35912242740CB00EC2639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF35911242740CB00EC2639 /* Assets.xcassets */; };
 		FAF35915242740CB00EC2639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF35913242740CB00EC2639 /* LaunchScreen.storyboard */; };
@@ -20,10 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA4EE0042428F3590021DEF7 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		FAF35905242740C900EC2639 /* BlubDeveloperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlubDeveloperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF35908242740C900EC2639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF3590A242740C900EC2639 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAF3590C242740C900EC2639 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAF3590C242740C900EC2639 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FAF3590F242740C900EC2639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAF35911242740CB00EC2639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF35914242740CB00EC2639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +68,7 @@
 			children = (
 				FAF35908242740C900EC2639 /* AppDelegate.swift */,
 				FAF3590A242740C900EC2639 /* SceneDelegate.swift */,
-				FAF3590C242740C900EC2639 /* ViewController.swift */,
+				FAF3590C242740C900EC2639 /* MainViewController.swift */,
 				FAF3590E242740C900EC2639 /* Main.storyboard */,
 				FAF3591E2427D6D600EC2639 /* CityDetailsViewController.swift */,
 				FAF3591C2427C22300EC2639 /* AddCityViewController.swift */,
@@ -75,6 +77,7 @@
 				FAF35916242740CB00EC2639 /* Info.plist */,
 				FAF359222427FDC900EC2639 /* WeatherService.swift */,
 				FAF359242428198300EC2639 /* WeatherData.swift */,
+				FA4EE0042428F3590021DEF7 /* City.swift */,
 			);
 			path = BlubDeveloperTest;
 			sourceTree = "<group>";
@@ -150,12 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF3590D242740C900EC2639 /* ViewController.swift in Sources */,
+				FAF3590D242740C900EC2639 /* MainViewController.swift in Sources */,
 				FAF35909242740C900EC2639 /* AppDelegate.swift in Sources */,
 				FAF359252428198300EC2639 /* WeatherData.swift in Sources */,
 				FAF3591F2427D6D600EC2639 /* CityDetailsViewController.swift in Sources */,
 				FAF3590B242740C900EC2639 /* SceneDelegate.swift in Sources */,
 				FAF359232427FDC900EC2639 /* WeatherService.swift in Sources */,
+				FA4EE0052428F3590021DEF7 /* City.swift in Sources */,
 				FAF3591D2427C22300EC2639 /* AddCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

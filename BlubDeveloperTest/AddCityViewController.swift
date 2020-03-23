@@ -7,16 +7,37 @@
 //
 
 import UIKit
+import os.log
 
 class AddCityViewController: UIViewController {
 
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var cityTextField: UITextField!
+    
+    var city: City?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func addButton(_ sender: Any) {
+    }
     
-
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let button = sender as? UIBarButtonItem, button === addButton else {
+            os_log("The add button was not pressed", log: OSLog.default, type: .debug)
+            return
+        }
+        let cityName = cityTextField.text ?? ""
+        city = City(name: cityName)
+        
+    }
     /*
     // MARK: - Navigation
 
