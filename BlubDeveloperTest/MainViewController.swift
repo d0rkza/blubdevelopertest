@@ -91,19 +91,17 @@ class MainViewController: UIViewController, UITableViewDataSource {
             
         case "AddCitySegue":
             print("Adding new city")
+            
         case "CityDetailsSegue":
             guard let cityDetailsViewController = segue.destination as? CityDetailsViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-             
             guard let selectedCityCell = sender as? WeatherTableCell else {
                 fatalError("Unexpected sender: \(sender)")
             }
-             
             guard let indexPath = tableView.indexPath(for: selectedCityCell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
-             
             let selectedCity = cities[indexPath.row]
             cityDetailsViewController.weatherInfo = selectedCity
         default:
