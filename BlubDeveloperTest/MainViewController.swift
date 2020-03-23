@@ -12,6 +12,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var cities = [CityWeather]()
+    // Display a message when the table is empty
     
     func saveCities() {
         
@@ -52,24 +53,6 @@ class MainViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        if (cities.count > 0) {
-            return 1;
-            
-        } else {
-            
-            // Display a message when the table is empty
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-            label.center = CGPoint(x: 160, y: 285)
-            label.textAlignment = .center
-            label.text = "You haven't added any cities yet =)"
-            self.view.addSubview(label)
-            
-        }
-
-        return 0;
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cities.count
     }
@@ -100,6 +83,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
             cities.append(city)
             saveCities()
             tableView.insertRows(at: [newIndexPath], with: .automatic)
+            tableView.reloadData()
         }
     }
     
@@ -126,6 +110,16 @@ class MainViewController: UIViewController, UITableViewDataSource {
         default:
             print("This shouldn't be here")
         }
+    }
+    
+    //Row deletion
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+      if editingStyle == .delete {
+
+        self.cities.remove(at: indexPath.row)
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        saveCities()
+      }
     }
     
     //Refresh control
