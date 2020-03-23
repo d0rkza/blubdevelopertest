@@ -13,6 +13,10 @@
 		FAF35910242740C900EC2639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF3590E242740C900EC2639 /* Main.storyboard */; };
 		FAF35912242740CB00EC2639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF35911242740CB00EC2639 /* Assets.xcassets */; };
 		FAF35915242740CB00EC2639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF35913242740CB00EC2639 /* LaunchScreen.storyboard */; };
+		FAF3591D2427C22300EC2639 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3591C2427C22300EC2639 /* AddCityViewController.swift */; };
+		FAF3591F2427D6D600EC2639 /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3591E2427D6D600EC2639 /* CityDetailsViewController.swift */; };
+		FAF359232427FDC900EC2639 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF359222427FDC900EC2639 /* WeatherService.swift */; };
+		FAF359252428198300EC2639 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF359242428198300EC2639 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		FAF35911242740CB00EC2639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF35914242740CB00EC2639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF35916242740CB00EC2639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF3591C2427C22300EC2639 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
+		FAF3591E2427D6D600EC2639 /* CityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
+		FAF359222427FDC900EC2639 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		FAF359242428198300EC2639 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +68,13 @@
 				FAF3590A242740C900EC2639 /* SceneDelegate.swift */,
 				FAF3590C242740C900EC2639 /* ViewController.swift */,
 				FAF3590E242740C900EC2639 /* Main.storyboard */,
+				FAF3591E2427D6D600EC2639 /* CityDetailsViewController.swift */,
+				FAF3591C2427C22300EC2639 /* AddCityViewController.swift */,
 				FAF35911242740CB00EC2639 /* Assets.xcassets */,
 				FAF35913242740CB00EC2639 /* LaunchScreen.storyboard */,
 				FAF35916242740CB00EC2639 /* Info.plist */,
+				FAF359222427FDC900EC2639 /* WeatherService.swift */,
+				FAF359242428198300EC2639 /* WeatherData.swift */,
 			);
 			path = BlubDeveloperTest;
 			sourceTree = "<group>";
@@ -140,7 +152,11 @@
 			files = (
 				FAF3590D242740C900EC2639 /* ViewController.swift in Sources */,
 				FAF35909242740C900EC2639 /* AppDelegate.swift in Sources */,
+				FAF359252428198300EC2639 /* WeatherData.swift in Sources */,
+				FAF3591F2427D6D600EC2639 /* CityDetailsViewController.swift in Sources */,
 				FAF3590B242740C900EC2639 /* SceneDelegate.swift in Sources */,
+				FAF359232427FDC900EC2639 /* WeatherService.swift in Sources */,
+				FAF3591D2427C22300EC2639 /* AddCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
