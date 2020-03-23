@@ -48,7 +48,26 @@ class MainViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCities()
+        self.tableView.addSubview(self.refreshControl)
         // Do any additional setup after loading the view.
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if (cities.count > 0) {
+            return 1;
+            
+        } else {
+            
+            // Display a message when the table is empty
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+            label.center = CGPoint(x: 160, y: 285)
+            label.textAlignment = .center
+            label.text = "You haven't added any cities yet =)"
+            self.view.addSubview(label)
+            
+        }
+
+        return 0;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -108,6 +127,78 @@ class MainViewController: UIViewController, UITableViewDataSource {
             print("This shouldn't be here")
         }
     }
+    
+    //Refresh control
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+                     #selector(MainViewController.handleRefresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        
+        return refreshControl
+    }()
+    
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        for c in cities
+        {
+            fetchWeather(city: c)
+        }
+        
+        cities.sort() { $0.name < $1.name }
+        
+        self.tableView.reloadData()
+        saveCities()
+        refreshControl.endRefreshing()
+    }
+    
+    func fetchWeather(city: CityWeather)
+        {
+            let apiKey = "bf926804600b5db9cca5c7ddbc80165f"
+            var urlComponents = URLComponents()
+            urlComponents.scheme = "https"
+            urlComponents.host = "api.openweathermap.org"
+            urlComponents.path = "/data/2.5/weather"
+            urlComponents.queryItems = [
+                URLQueryItem(name: "q", value: city.name),
+               URLQueryItem(name: "APPID", value: apiKey)
+            ]
+
+            guard let validURL = urlComponents.url else {
+                print("Failed to create URL...")
+                return
+            }
+            
+            URLSession.shared.dataTask(with: validURL) {
+                (data, response, error) in
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("API Status: \(httpResponse.statusCode)")
+                    if(httpResponse.statusCode != 200) {
+                        return
+                    }
+                }
+                
+                guard let validData = data, error == nil else {
+                    print("API error: \(error!.localizedDescription)")
+                    return
+                }
+                
+                do {
+                    let weatherData = try JSONDecoder().decode(WeatherServiceData.self, from: validData)
+                    DispatchQueue.main.async {
+                        city.name = weatherData.name
+                        city.setTemperature(temp: weatherData.main.temp)
+                        city.humidity = weatherData.main.humidity
+                        city.description = weatherData.weather.description
+                    }
+                } catch let serializationError {
+                    print(serializationError.localizedDescription)
+                }
+                
+            }.resume()
+        }
     
 }
 

@@ -14,8 +14,8 @@
             filePath = "BlubDeveloperTest/CityDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "fetchWeather(city:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "BlubDeveloperTest/CityDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "fetchWeather(city:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -40,6 +40,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "57F92784-40C7-4D4F-85C7-7BF185E42317"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlubDeveloperTest/CityDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetchWeather(city:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38FEAD14-637D-4678-B36A-2141AEDFDEE3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -55,7 +71,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "38FEAD14-637D-4678-B36A-2141AEDFDEE3"
+            uuid = "8D73A33C-8BBF-4102-A148-7EDF60D7831F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -71,17 +87,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8D73A33C-8BBF-4102-A148-7EDF60D7831F"
+            uuid = "911779A7-50B2-45E8-9812-28D927351D4A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BlubDeveloperTest/CityDetailsViewController.swift"
+            filePath = "BlubDeveloperTest/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "fetchWeather(city:)"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "handleRefresh(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "911779A7-50B2-45E8-9812-28D927351D4A - 7fadb6641e7d25d1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BlubDeveloperTest.MainViewController.handleRefresh(__C.UIRefreshControl) -&gt; ()"
+                  moduleName = "BlubDeveloperTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markopranjic/Desktop/Dev/BlubDeveloperTest/BlubDeveloperTest/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  uuid = "911779A7-50B2-45E8-9812-28D927351D4A - 4888705fe5b73e32"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BlubDeveloperTest.CityWeather, BlubDeveloperTest.CityWeather) -&gt; Swift.Bool in BlubDeveloperTest.MainViewController.handleRefresh(__C.UIRefreshControl) -&gt; ()"
+                  moduleName = "BlubDeveloperTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markopranjic/Desktop/Dev/BlubDeveloperTest/BlubDeveloperTest/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

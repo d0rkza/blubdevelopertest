@@ -21,7 +21,6 @@ class CityDetailsViewController: UIViewController {
     func fetchWeather(city: String)
         {
             let apiKey = "bf926804600b5db9cca5c7ddbc80165f"
-            var cityWeather = CityWeather()
             var urlComponents = URLComponents()
             urlComponents.scheme = "https"
             urlComponents.host = "api.openweathermap.org"
@@ -63,7 +62,7 @@ class CityDetailsViewController: UIViewController {
                     let weatherData = try JSONDecoder().decode(WeatherServiceData.self, from: validData)
                     DispatchQueue.main.async {
                         self.name.text = self.weatherInfo?.name
-                        self.currentTemperature.text = "\(String(describing: weatherData.main.temp))"
+                        self.currentTemperature.text = "\(String(describing: (Int)(weatherData.main.temp - 273.15)))"
                         self.humidity.text = "\(String(describing: weatherData.main.humidity))"
                         self.weatherDescription.text = weatherData.weather.description.description
                         self.fetchingDataIndicator.stopAnimating()

@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct CityWeather: Codable {
+class CityWeather: Codable {
     var name: String
-    var temperature: Double?
+    var temperature: Int?
     var humidity: Int?
     var description: String?
     
@@ -21,4 +21,9 @@ struct CityWeather: Codable {
     init(name: String) {
         self.name = name
     }
+    
+    func setTemperature(temp: Double){
+        temperature = (Int)(temp - 273.15)
+    }
+    
 }
