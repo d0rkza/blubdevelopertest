@@ -24,7 +24,13 @@ class AddCityViewController: UIViewController, UITextFieldDelegate {
         updateAddButtonState()
     }
 
+    //Navigation
+    //Dismiss this view
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
+    //Prepare data to be transfered through segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         

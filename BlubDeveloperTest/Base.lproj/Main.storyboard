@@ -77,7 +77,11 @@
                         <viewLayoutGuide key="safeArea" id="tK6-xd-cKh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add City" id="IKa-yr-99p">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="25r-Xy-6uI"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="25r-Xy-6uI">
+                            <connections>
+                                <action selector="cancel:" destination="KL7-uX-OqM" id="Hzp-9c-gq8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="RIc-0r-8Qc">
                             <connections>
                                 <segue destination="qE8-ae-ojD" kind="unwind" unwindAction="unwindToCityListWithSender:" id="YWO-QC-Mk6"/>
