@@ -23,8 +23,10 @@ struct WeatherService
     
     let apiKey = "bf926804600b5db9cca5c7ddbc80165f"
     
-    func fetchWeather(city: String)
+    func fetchWeather(city: String) -> CityWeather?
     {
+        if(city == "") { return nil }
+        var cityWeather = CityWeather()
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.openweathermap.org"
@@ -36,7 +38,7 @@ struct WeatherService
 
         guard let validURL = urlComponents.url else {
             print("Failed to create URL...")
-            return
+            return nil
         }
         
         URLSession.shared.dataTask(with: validURL) {
@@ -53,13 +55,18 @@ struct WeatherService
             do {
 //                let json = try JSONSerialization.jsonObject(with: validData, options: [])
                 let weatherData = try JSONDecoder().decode(WeatherServiceData.self, from: validData)
-                print(weatherData)
+//                print(weatherData)
+                cityWeather.name = weatherData.name
+                cityWeather.temperature = weatherData.main.temp
+                cityWeather.humidity = weatherData.main.humidity
+                cityWeather.description = weatherData.weather.description
+                
             } catch let serializationError {
                 print(serializationError.localizedDescription)
             }
             
         }.resume()
-        
+        return cityWeather
     }
 }
 

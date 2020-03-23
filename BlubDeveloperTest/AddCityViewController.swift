@@ -15,7 +15,7 @@ class AddCityViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var cityTextField: UITextField!
     
-    var city: City?
+    var city: CityWeather?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class AddCityViewController: UIViewController, UITextFieldDelegate {
             return
         }
         let cityName = cityTextField.text ?? ""
-        city = City(name: cityName)
+        city = CityWeather(name: cityName)
         
     }
     

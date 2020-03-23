@@ -10,20 +10,29 @@ import UIKit
 
 class CityDetailsViewController: UIViewController {
 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var currentTemperature: UILabel!
+    @IBOutlet weak var humidity: UILabel!
+    @IBOutlet weak var weatherDescription: UILabel!
+    
+    var weatherInfo: CityWeather?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        weatherInfo = WeatherService.shared.fetchWeather(city: weatherInfo?.name ?? "")
+        if(weatherInfo != nil) {
+            name.text = weatherInfo?.name
+            currentTemperature.text = "\(String(describing: weatherInfo?.temperature))"
+            humidity.text = "\(String(describing: weatherInfo?.humidity))"
+            weatherDescription.text = weatherDescription?.description
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
 
-    @IBOutlet weak var CityName: UITextField!
-    @IBOutlet weak var Weather: UILabel!
-    @IBOutlet weak var Temperature: UILabel!
-    @IBOutlet weak var Wind: UILabel!
-    
-    @IBAction func GetDataFromServer(_ sender: Any) {
-        WeatherService.shared.fetchWeather(city: CityName.text!)
-    }
     /*
     // MARK: - Navigation
 

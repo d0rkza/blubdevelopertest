@@ -8,9 +8,17 @@
 
 import Foundation
 
-struct City {
+struct CityWeather: Codable {
     var name: String
     var temperature: Double?
-    var humidity: Double?
+    var humidity: Int?
     var description: String?
+    
+    init() {
+        name = "Unasigned"
+    }
+    
+    init(name: String) {
+        self.name = name
+    }
 }

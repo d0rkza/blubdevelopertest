@@ -11,14 +11,43 @@ import UIKit
 class MainViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var cities = [
-    City(name: "Velenje"),
-    City(name: "Ljubljana"),
-    City(name: "London")
-    ]
+    var cities = [CityWeather]()
+    
+    func saveCities() {
+        
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+
+            // Encode Note
+            let data = try encoder.encode(cities)
+
+            // Write/Set Data
+            UserDefaults.standard.set(data, forKey: "savedCities")
+
+        } catch {
+            print("Unable to Encode Array of Notes (\(error))")
+        }
+    }
+    
+    func loadCities() {
+        if let data = UserDefaults.standard.data(forKey: "savedCities") {
+        do {
+            // Create JSON Decoder
+            let decoder = JSONDecoder()
+
+            // Decode city
+            cities = try decoder.decode([CityWeather].self, from: data)
+
+        } catch {
+            print("Unable to Decode Note (\(error))")
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadCities()
         // Do any additional setup after loading the view.
     }
     
@@ -50,14 +79,37 @@ class MainViewController: UIViewController, UITableViewDataSource {
             let newIndexPath = IndexPath(row: cities.count, section: 0)
             
             cities.append(city)
+            saveCities()
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
     
-    @IBAction func navigateToAddCity(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch (segue.identifier ?? "") {
+            
+        case "AddCitySegue":
+            print("Adding new city")
+        case "CityDetailsSegue":
+            guard let cityDetailsViewController = segue.destination as? CityDetailsViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+             
+            guard let selectedCityCell = sender as? WeatherTableCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+             
+            guard let indexPath = tableView.indexPath(for: selectedCityCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+             
+            let selectedCity = cities[indexPath.row]
+            cityDetailsViewController.weatherInfo = selectedCity
+        default:
+            print("This shouldn't be here")
+        }
     }
-    
-    
     
 }
 
