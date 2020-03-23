@@ -52,7 +52,7 @@ struct WeatherService
             
             do {
 //                let json = try JSONSerialization.jsonObject(with: validData, options: [])
-                let weatherData = try JSONDecoder().decode(WeatherData.self, from: validData)
+                let weatherData = try JSONDecoder().decode(WeatherServiceData.self, from: validData)
                 print(weatherData)
             } catch let serializationError {
                 print(serializationError.localizedDescription)

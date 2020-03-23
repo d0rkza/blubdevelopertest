@@ -10,4 +10,7 @@ import Foundation
 
 struct City {
     var name: String
+    var temperature: Double?
+    var humidity: Double?
+    var description: String?
 }

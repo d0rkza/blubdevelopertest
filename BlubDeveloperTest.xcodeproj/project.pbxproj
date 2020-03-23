@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA4EE0052428F3590021DEF7 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4EE0042428F3590021DEF7 /* City.swift */; };
+		FA4EE007242910740021DEF7 /* WeatherTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4EE006242910740021DEF7 /* WeatherTableCell.swift */; };
 		FAF35909242740C900EC2639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF35908242740C900EC2639 /* AppDelegate.swift */; };
 		FAF3590B242740C900EC2639 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3590A242740C900EC2639 /* SceneDelegate.swift */; };
 		FAF3590D242740C900EC2639 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3590C242740C900EC2639 /* MainViewController.swift */; };
@@ -17,11 +18,12 @@
 		FAF3591D2427C22300EC2639 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3591C2427C22300EC2639 /* AddCityViewController.swift */; };
 		FAF3591F2427D6D600EC2639 /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3591E2427D6D600EC2639 /* CityDetailsViewController.swift */; };
 		FAF359232427FDC900EC2639 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF359222427FDC900EC2639 /* WeatherService.swift */; };
-		FAF359252428198300EC2639 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF359242428198300EC2639 /* WeatherData.swift */; };
+		FAF359252428198300EC2639 /* WeatherServiceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF359242428198300EC2639 /* WeatherServiceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA4EE0042428F3590021DEF7 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		FA4EE006242910740021DEF7 /* WeatherTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableCell.swift; sourceTree = "<group>"; };
 		FAF35905242740C900EC2639 /* BlubDeveloperTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlubDeveloperTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF35908242740C900EC2639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF3590A242740C900EC2639 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +35,7 @@
 		FAF3591C2427C22300EC2639 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		FAF3591E2427D6D600EC2639 /* CityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
 		FAF359222427FDC900EC2639 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
-		FAF359242428198300EC2639 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		FAF359242428198300EC2639 /* WeatherServiceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,9 @@
 				FAF35911242740CB00EC2639 /* Assets.xcassets */,
 				FAF35913242740CB00EC2639 /* LaunchScreen.storyboard */,
 				FAF35916242740CB00EC2639 /* Info.plist */,
+				FA4EE006242910740021DEF7 /* WeatherTableCell.swift */,
 				FAF359222427FDC900EC2639 /* WeatherService.swift */,
-				FAF359242428198300EC2639 /* WeatherData.swift */,
+				FAF359242428198300EC2639 /* WeatherServiceData.swift */,
 				FA4EE0042428F3590021DEF7 /* City.swift */,
 			);
 			path = BlubDeveloperTest;
@@ -155,7 +158,8 @@
 			files = (
 				FAF3590D242740C900EC2639 /* MainViewController.swift in Sources */,
 				FAF35909242740C900EC2639 /* AppDelegate.swift in Sources */,
-				FAF359252428198300EC2639 /* WeatherData.swift in Sources */,
+				FA4EE007242910740021DEF7 /* WeatherTableCell.swift in Sources */,
+				FAF359252428198300EC2639 /* WeatherServiceData.swift in Sources */,
 				FAF3591F2427D6D600EC2639 /* CityDetailsViewController.swift in Sources */,
 				FAF3590B242740C900EC2639 /* SceneDelegate.swift in Sources */,
 				FAF359232427FDC900EC2639 /* WeatherService.swift in Sources */,

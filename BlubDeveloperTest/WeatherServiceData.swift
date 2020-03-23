@@ -46,7 +46,7 @@ struct Coord: Codable {
     let lat: Double
 }
 
-struct WeatherData: Codable {
+struct WeatherServiceData: Codable {
     let coord: Coord
     let weather: [Weather]
     let base: String
