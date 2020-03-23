@@ -9,7 +9,7 @@
 import UIKit
 import os.log
 
-class AddCityViewController: UIViewController {
+class AddCityViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
@@ -19,13 +19,11 @@ class AddCityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        cityTextField.delegate = self
+        updateAddButtonState()
     }
-    @IBAction func addButton(_ sender: Any) {
-    }
-    
-    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -38,14 +36,24 @@ class AddCityViewController: UIViewController {
         city = City(name: cityName)
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func textFieldDidBeginEditing(_ cityTextField: UITextField) {
+        addButton.isEnabled = false
     }
-    */
-
+    
+    func textFieldShouldReturn(_ cityTextField: UITextField) -> Bool {
+        cityTextField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ cityTextField: UITextField) {
+        updateAddButtonState()
+        navigationItem.title = cityTextField.text
+    }
+    
+    func updateAddButtonState() {
+        let text = cityTextField.text ?? ""
+        
+        addButton.isEnabled = !text.isEmpty
+    }
 }

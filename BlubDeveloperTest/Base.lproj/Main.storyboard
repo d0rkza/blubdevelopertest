@@ -63,7 +63,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="address-level2"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="address-level2"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9f-rE-w6L">
                                 <rect key="frame" x="20" y="106" width="38" height="20"/>
@@ -80,7 +80,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="25r-Xy-6uI"/>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="RIc-0r-8Qc">
                             <connections>
-                                <action selector="addButton:" destination="KL7-uX-OqM" id="7S5-5F-3Ph"/>
                                 <segue destination="qE8-ae-ojD" kind="unwind" unwindAction="unwindToCityListWithSender:" id="YWO-QC-Mk6"/>
                             </connections>
                         </barButtonItem>
